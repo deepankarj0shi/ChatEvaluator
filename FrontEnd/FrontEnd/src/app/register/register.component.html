@@ -1,0 +1,9 @@
+<div class="register-wrapper">
+  <div class="register-container">
+    <h2>Register New User</h2>
+    <input [(ngModel)]="username" placeholder="Username" />
+    <input [(ngModel)]="password" type="password" placeholder="Password" />
+    <button (click)="register()">Register</button>
+    <div *ngIf="error" class="error">{{ error }}</div>
+  </div>
+</div>

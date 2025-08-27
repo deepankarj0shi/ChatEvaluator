@@ -1,0 +1,12 @@
+<div class="chat-container">
+  <!-- <app-header></app-header> -->
+  <div class="messages">
+    <div *ngFor="let msg of messages" [class.user]="msg.user==='You'" [class.bot]="msg.user==='Bot'">
+      <strong>{{ msg.user }}:</strong> {{ msg.text }}
+    </div>
+  </div>
+  <div class="input-box">
+    <input [(ngModel)]="expression" (keyup.enter)="sendMessage()" placeholder="Enter arithmetic expression..." />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>
